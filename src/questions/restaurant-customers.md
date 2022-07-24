@@ -20,12 +20,12 @@ Print one integer: the maximum number of customers.
 
 ```py
 def max_customers(customers: List[(int, int)]) -> int:
+  customers.sort()
   q = []
+
   for enter_time, leave_time in customers:
     q.append((enter_time, True))
     q.append((leave_time, False))
-
-  q.sort()
 
   customers = 0
   max_customers_so_far = 0
