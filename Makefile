@@ -2,7 +2,7 @@ SOURCE_DOCS := $(shell find src -type f -name "*.md")
 
 HTML_FILES=$(SOURCE_DOCS:src/%.md=site/%.html)
 
-all: generate_indexes html fix_links
+all: generate_indexes html fix_links build_index
 	miniserve site --index index.html
 
 deploy: html build_index
@@ -14,7 +14,7 @@ site/%.html: src/%.md templates/site.html
 	pandoc -f markdown+fenced_divs -s $< -o $@ --table-of-contents --template templates/site.html
 
 build_index: $(SOURCE_DOCS)
-	npx -y pagefind --source site
+	pagefind --source site
 
 fix_links: $(HTML_FILES)
 	./bin/convert-html.sh
