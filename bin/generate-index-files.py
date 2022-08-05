@@ -4,17 +4,6 @@ from pathlib import Path
 
 folders = [f for f in Path('./src').glob('**/**') if f.is_dir()]
 
-# for each folder, iterate through and set the link in index
-index_file_contents = """# Index
-
-"""
-
-for f in sorted(folders):
-    index_file_contents += f"- [{f.stem}]({f.stem}/index.md)\n"
-
-with open("./src/index.md", "w+") as f:
-    f.write(index_file_contents)
-
 for folder in folders:
     contents = """# Index
 
@@ -26,3 +15,15 @@ for folder in folders:
         contents += f"- [{md_file.stem}]({md_file.name})\n"
     with open(f"{folder}/index.md", "w+") as f:
         f.write(contents)
+
+# for each folder, iterate through and set the link in index
+index_file_contents = """# Index
+
+"""
+index_folders = [f for f in Path('./src').glob('*') if f.is_dir()]
+
+for f in sorted(index_folders):
+    index_file_contents += f"- [{f.stem}]({f.stem}/index.md)\n"
+
+with open("./src/index.md", "w+") as f:
+    f.write(index_file_contents)
