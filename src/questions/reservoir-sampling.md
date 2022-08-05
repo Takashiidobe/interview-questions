@@ -5,7 +5,7 @@ Given a stream of data, select k items at random.
 (The story was making grep work by returning random samples instead of
 the whole data set (that was too heavy to store in memory)).
 
-## Halfway Solutions
+ Halfway Solutions
 
 1. Pick an item with probability k/n
 2. Store all items, then pick k of them

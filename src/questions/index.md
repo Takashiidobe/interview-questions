@@ -11,6 +11,7 @@
 - [heavy-hitters](heavy-hitters.md)
 - [hyperloglog](hyperloglog.md)
 - [job-queue](job-queue.md)
+- [justify-text](justify-text.md)
 - [max-size-of-island-with-change](max-size-of-island-with-change.md)
 - [messaging-service](messaging-service.md)
 - [min-rectangle](min-rectangle.md)
