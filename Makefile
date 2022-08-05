@@ -5,7 +5,7 @@ HTML_FILES=$(SOURCE_DOCS:src/%.md=site/%.html)
 all: generate_indexes html fix_links build_index
 	miniserve site --index index.html
 
-deploy: html build_index
+deploy: generate_indexes html fix_links build_index
 	ntl deploy --prod
 
 html: mkdirs $(HTML_FILES)
