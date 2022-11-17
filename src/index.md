@@ -1,5 +1,6 @@
 # Index
 
+- [design](design/index.md)
 - [misc](misc/index.md)
 - [week1](week1/index.md)
 - [week2](week2/index.md)
