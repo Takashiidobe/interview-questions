@@ -20,3 +20,5 @@
 18. [What does -ffast-math do? Why is it useful?](./trivia/ffast-math.md)
 19. [What is SIMD?](./trivia/simd.md)
 20. [How does a compiler compile your code? What is the difference between static and dynamic linking? How do symbols get resolved in each?](./trivia/compiling.md)
+21. What is the difference between multicast and TCP? How would you send packets from one client to subscribers?
+22. (Incomplete) [How would you make a load balancer? How would you keep a server from being overloaded and fair?](./trivia/load-balancing.md)

@@ -1,9 +1,11 @@
 # Index
 
 - [concurrent-median](concurrent-median.md)
+- [design-a-feed-of-top-companies](design-a-feed-of-top-companies.md)
 - [design-a-rate-limiter](design-a-rate-limiter.md)
 - [design-a-syncing-file-server](design-a-syncing-file-server.md)
 - [design-an-atm](design-an-atm.md)
+- [design-an-order-book](design-an-order-book.md)
 - [design-make](design-make.md)
 - [design-youtube](design-youtube.md)
 - [google-behavioral](google-behavioral.md)
