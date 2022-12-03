@@ -68,10 +68,9 @@ class Solution:
         }
 
         rt = 0
-        n = len(s)
 
         for i, (curr_char, next_char) in enumerate(zip_longest(s, s[1:])):
-            if i == n - 1 or rd[curr_char] >= rd[next_char]:
+            if not next_char or rd[curr_char] >= rd[next_char]:
                 rt += rd[curr_char]
             else:
                 rt -= rd[curr_char]

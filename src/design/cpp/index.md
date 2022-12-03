@@ -1,0 +1,3 @@
+# Index
+
+- [nodiscard](nodiscard.md)
