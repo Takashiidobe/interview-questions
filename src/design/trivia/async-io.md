@@ -34,4 +34,4 @@ This allows for batched I/O, and the kernel to run batched requests, which can l
 
 Epoll, Select, and AIO all have flaws that make them hard to use.
 
-Select and requires iterating over all the passed file descriptors, state, and register callbacks, which is slow. At 100 or so fds, this is a huge bottleneck and starts to degrade performance -- use libuv at this point.
+Select, poll, and epoll require iterating over all the passed file descriptors, state, and register callbacks, which is slow. At 100 or so fds, this is a huge bottleneck and starts to degrade performance. This can cause polynomial degradation of performance for the calls, so use io_uring or some other thing by that point.
