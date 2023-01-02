@@ -48,7 +48,7 @@ To optimize floating point values, we can successively XOR them, as long as they
 
 Time series databases write a lot of data, so it's a cardinal sin to have data with high cardinality (many possibilities). For example, tagging errors with HTTP Codes isn't that bad, since there are only ~20 of them commonly used.
 
-Thus, we'll maintain 20 Time series in memory.
+Thus, we'll maintain 20 time series in memory.
 
 However, let's say we add accounts into the mix -- and we have 1M accounts. Well, now we have 20 * 1M or (20M) time series databases. This is quite expensive, and will either cost you lots of money or lots of compute.
 

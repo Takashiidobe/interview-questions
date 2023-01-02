@@ -2,14 +2,14 @@
 
 on x86, cache lines are 64-bytes, and look like the following:
 
-| Type | Size | Latency     |
-|------|------|-------------|
-| L1   | 64KB | 1 cycle     |
-| L2   | 9MB  | 10 cycles   |
-| L3   | 12MB | 50 cycles   |
-| RAM  | 32GB | 200 cycles  |
-| SSD  | 2TB  | 3000 cycles |
-| HDD  | 16TB | 1.5M cycles |
+| Type | Size | Latency     | Throughput |
+|------|------|-------------| -----------|
+| L1   | 64KB | 1 cycle     | 1TB/s+     |
+| L2   | 9MB  | 10 cycles   | 1TB/s      |
+| L3   | 12MB | 50 cycles   | 400GB/s    |
+| RAM  | 32GB | 200 cycles  | 25-100GB/s |
+| SSD  | 2TB  | 3000 cycles | 5GB/s      |
+| HDD  | 16TB | 1.5M cycles | 200MB/s    |
 
 There are also caches for the Translation Lookaside Buffer (TLB) which are 1024 pages.
 

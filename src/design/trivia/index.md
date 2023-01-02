@@ -36,6 +36,7 @@
 - [scheduling](scheduling.md)
 - [shell](shell.md)
 - [simd](simd.md)
+- [tcp-fast-open](tcp-fast-open.md)
 - [tcp-vs-udp](tcp-vs-udp.md)
 - [threading-models](threading-models.md)
 - [tlb](tlb.md)

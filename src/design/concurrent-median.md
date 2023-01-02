@@ -26,5 +26,4 @@ threads?
   underlying data structure) to have reads and writes not have to mutate
   the underlying data structure, in exchange for stale reads (since
   reads dont synchronize before fetching).
-
-
+- Read-Copy-Update works, but

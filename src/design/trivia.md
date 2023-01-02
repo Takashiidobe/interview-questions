@@ -49,3 +49,7 @@
 47. [What is the TLB?](./trivia/tlb.md)
 47. [What is a Mac Address?](./trivia/mac-address.md)
 48. [What are some ways to lock memory?](./trivia/locking.md)
+49. [What is TCP Fast Open?](./trivia/tcp-fast-open.md)
+50. [How does HTTPS work?](./trivia/https.md)
+51. [How does Diffie Hellman Encryption work?](./trivia/diffie-hellman.md)
+52. [How fast is memory?](./trivia/memory-speed.md)
