@@ -18,6 +18,10 @@ Some problems include:
 
 1. Misbehaving CAs (Symantec did this in the past, which lead to their certificates being removed from chrome). This means certain websites would become inaccessible for users, until servers changed their certs.
 
-2. Weak Cryptography. RSA has been removed from TLS 1.3 (For good reason), to be replaced with more secure Diffie-Hellman curves. RSA-512 is supported on HTTPS, which can be cracked in less than $100 worth of AWS EC2 compute.
+2. Weak Cryptography. RSA has been removed from TLS 1.3 (For good reason), to be replaced with more secure Diffie-Hellman curves. RSA-512 is supported on HTTPS, which can be cracked in less than $100 worth of AWS EC2 compute (FREAK). This is now impossible in TLS 1.3, because the server signs the payload deciding the cipher to use, which makes FREAK impossible.
 
 3. Forward Secrecy: If a Server's Private key is leaked, all communications from the past can be unencrypted. To combat this, forward secrecy is used, which means after a key exchange of the server and client of public keys, each session can be encrypted with a different session key, which can be used to authenticate each other for one session.
+
+## How did TLS 1.3 improve HTTPS?
+
+- TLS 1.3 now requires one less round trip than TLS 1.2, as it only requires one round trip instead of two. If the user has connected to a website before, then it requires 0 round trips.

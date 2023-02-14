@@ -14,14 +14,12 @@ Fsync also seems to have a lot of overhead when using `write()` and `aio_write()
 - synchronous random write + fsync: ~800 ops/s, (214MB/s)
 - synchronous sequential read: ~2.9k ops/s, (757MB/s)
 - synchronous random read: ~2.2k ops/s, (575MB/s)
-
 - asynchronous sequential write - fsync: ~2.3k ops/s, (599MB/s)
 - asynchronous sequential write + fsync: ~800 ops/s, (212MB/s)
 - asynchronous random write - fsync: ~2.3k ops/s, (592MB/s)
 - asynchronous random write + fsync: ~800 ops/s, (217MB/s)
 - asynchronous sequential read: ~3k ops/s, (763MB/s)
 - asynchronous random read: ~2.1k ops/s, (561MB/s)
-
 - io_uring sequential write - fsync: ~2.8k ops/s, (723MB/s)
 - io_uring sequential write + fsync: ~2.5k ops/s, (653MB/s)
 - io_uring random write - fsync: ~3.3k ops/s, (872MB/s)
@@ -46,7 +44,7 @@ Caches:
 | SSD  | 2TB  | 3000 cycles | 5GB/s      |
 | HDD  | 16TB | 1.5M cycles | 200MB/s    |
 
-- Mutex lock/unlock w/ libpthread: (6ns)
+- Mutex lock/unlock, no context switch: (6ns)
 - System call: (114.8ns)
 - Process context switch: (~2.5μs)
 - Thread context switches w/ futex: (~2.2μs)
@@ -54,14 +52,14 @@ Caches:
 
 ## Hashing
 
-sha3-256:          56.14 MiB/sec
-md5:              404.15 MiB/sec
-sha1:             432.36 MiB/sec
-xxhash:          1827.80 MiB/sec
-murmur3:         1826.07 MiB/sec
-jhash:           1542.84 MiB/sec
-fnv:             3720.28 MiB/sec
-crc32c:          4682.73 MiB/sec
+- sha3-256:          56.14 MiB/sec
+- md5:              404.15 MiB/sec
+- sha1:             432.36 MiB/sec
+- xxhash:          1827.80 MiB/sec
+- murmur3:         1826.07 MiB/sec
+- jhash:           1542.84 MiB/sec
+- fnv:             3720.28 MiB/sec
+- crc32c:          4682.73 MiB/sec
 
 ## Historical
 

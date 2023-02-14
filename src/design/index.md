@@ -25,6 +25,7 @@
 - [hash-tables](hash-tables.md)
 - [heavy-hitters](heavy-hitters.md)
 - [hyperloglog](hyperloglog.md)
+- [insert-delete-get-random-o-1](insert-delete-get-random-o-1.md)
 - [job-queue](job-queue.md)
 - [key-value-store](key-value-store.md)
 - [market-maker](market-maker.md)
